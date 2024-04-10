@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Xchange Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <!--- <link rel="stylesheet" href="about.css">--->
+
+    <!---ICON LINK--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+ 
+    <!-- GOOGLE FONTS (MONTSERRAT)--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   
+  <Script>
+
+        $(function() {
+          $(".toggle").on("click", function(){
+
+            if($(".item").hasClass("active")){
+                $(".item").removeClass("active");
+                
+
+            }
+            else{
+                $(".item").addClass("active");
+            }
+
+          })
+
+        });
+
+  </Script>
+
+</head>
+<body>
+    
+   <!----<section class="banner"
+        <img src="img/back.jpg">  
+    </section>--->
+    <nav>
+
+        <ul class="menu">
+             
+            <li class="logo"><a href="#">Xchange</a></li>
+            <li class="item"><a href="index.html">Home</a></li>
+            <li class="item"><a href="about.html">About</a></li>
+            <li class="item"><a href="contact.html">Contact</a></li>
+            <li class="item button"><a href="#">Login</a></li>
+            <li class="item button secondary"><a href="#">Sign Up</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+
+        </ul>
+
+    </nav>
+
+    <section>
+
+
+        <div class = "wrapper">
+            <div class = "banner"></div>
+            <!--<div class = "white-paper"></div>-->
+    
+            <div class = "converter-wrapper">
+                <h2>Currency Converter</h2>
+                <!-- converter inputs -->
+                <div class = "converter-inputs">
+                    <div class = "from-amount">
+                        <label for = "">Amount</label>
+                        <input type = "number" class = "form-control" placeholder="$" min = "0" value = "1">
+                    </div>
+                    <div class = "from-currency">
+                        <label for = "">From</label>
+                        <select>
+                            <!--- <option>USD</option> --->
+                             
+                        </select> 
+                    </div>
+                    <div class = "icon">
+                        <button type = "button" id = "swap-btn">
+                            <img src="img/exchange.png">
+                        </button>
+                    </div>
+                    <div class = "to-currency">
+                        <label for = "">To</label>
+                        <select>
+                             <!--<option>USD</option>--->
+                            
+
+                        </select>
+                    </div>
+                </div>
+    
+                <!-- converted result -->
+                <div class = "result-wrapper">
+                    <p>
+                        <span id = "from-result">USD 1</span>
+                        =
+                        <span id = "to-result">GBP 1</span>
+                    </p>
+                </div>
+                <button type = "button" id = "convert-btn">convert</button>
+            </div>
+           </div>
+
+
+    </section >
+
+   
+    <section class="categories">
+        <div class="container categories_container">
+            <div class="categories__left">
+                <h1>How to use Xchange Currency Converter</h1>
+            <p>
+                To use Xchange free currency converter,type into the relevant field the currency name to select your currency.
+            </p>
+            <a href="about.html" class="btn ">learn More</a>
+
+            </div>
+            <div class="categories__right">
+               <article class="category" >
+                <span class="category__icon"><i class="fa-brands fa-bitcoin"></i></span>
+                <h5>Blockchain</h5>
+                 <p>Blockchain technology enables transparent information sharing within a business network through an advanced database mechanism.</p>
+                </article> 
+     
+                    <article class="category" >
+                     <span class="category__icon"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+                     <h5>Finance</h5>
+                      <p>Finance encompasses the management of money, assets, and investments to achieve financial goals.</p>
+                    </article> 
+
+                        <article class="category" >
+                         <span class="category__icon"><i class="fa-solid fa-people-group"></i></span>
+                         <h5>Marketing</h5>
+                          <p>Marketing involves the strategic planning and execution of activities aimed at promoting products or services to target customers, ultimately driving sales and achieving business objectives. </p>
+                        </article> 
+                          
+                            <article class="category" >
+                             <span class="category__icon"><i class="fa-solid fa-landmark"></i></span>
+                             <h5>Business</h5>
+                              <p>
+                                Business involves the creation, management, and exchange of goods or services for value, encompassing various activities such as production, marketing, finance, and operations. </p>
+                         
+                     
+                 
+
+               </article> 
+            </div>
+            
+        </div>
+
+
+
+    </section>
+    
+    
+    
+    <footer>
+        <div class="container footer__container">
+            <div class="footer__1">
+                <a href="index.html" class="footer__logo"><h4>Xchange</h4></a>
+                <p>
+                     	
+ 
+Xchange allows you to check the latest mid-market exchange rates. 
+                </p>
+            </div>
+    
+            <div class="footer__2">
+                <h4>Permalinks</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer__3">
+                <h4>Privacy</h4>
+                <ul class="privacy">
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer__4">
+                <h4>Contact Us</h4>
+                <div>
+                    <p>+12345678901</p>
+                    <p>support@sample.com</p>
+                </div>
+            </div>
+    
+            <div class="footer__copyright">
+                <small>Copyright &copy; Xchange 2024 </small>
+            </div>
+        </div>
+    </footer>  
+    
+
+    
+
+  <!--Js file -->
+   <script src = "./script.js"></script>
+
+</body>
+</html>

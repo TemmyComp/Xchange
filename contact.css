@@ -1,0 +1,105 @@
+.contact__container {
+    background:#00538C;
+    padding:4rem;
+    display: grid;
+    grid-template-columns: 40% 50% ;
+    gap:4rem;
+    height:30rem;
+    margin: 7rem auto;
+    border-radius: 1rem;
+
+}
+
+/*================== ASIDE ============== */
+ .contact__aside {
+     background:#6050DC;
+     padding: 3rem;
+     border-radius: 1rem;
+     position: relative;
+     bottom: 10rem;
+     color: #fff;
+ }
+    
+ .aside__image{
+    width: 12rem;
+    margin-bottom: 2rem;
+ }
+
+ .contact__aside h2{
+   text-align: left; 
+   margin-bottom: 1rem;
+ }
+ .contact__aside p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+ }
+
+ .contact__details li {
+    display: flex;
+    gap:1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+ }
+
+ /*======================== FORM =======================*/
+
+ .contact__form {
+    display:flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+ }
+
+ .form__name {
+    display: flex;
+    gap: 1.2rem;
+ }
+
+ .contact__form input[type="text"] {
+    width: 50%;   
+ }
+
+ input, textarea {
+    width: 100%;
+    padding: 1rem;
+    background:#E1EBEE;
+    color: #000;
+ }
+
+ .contact__form .btn {
+    width:max-content;
+    margin-top: 1rem;
+    cursor: pointer;
+ }
+
+ .contact__form .btn:hover {
+    box-shadow: 0 5px rgba(195, 174, 52, 0.3);
+    transform:translate(4px);
+    z-index: 1;
+ }
+
+ /* ================================ Media Queries ===================== */
+  @media screen and(max-width: 1024px) {
+    .contact {
+    }
+    
+ 
+
+  .contact__container {
+    gap: 1.5rem;
+    margin-top: 3rem;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .contact__aside{
+    width: auto;
+    padding: 1.5rem;
+    bottom: 0;
+  }
+
+  .contact__form {
+    align-self:center;
+    margin: right 1.5rem;
+  }
+}
