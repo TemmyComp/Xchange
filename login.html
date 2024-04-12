@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Xchange Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+  
+
+    <!---ICON LINK--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+ 
+    <!-- GOOGLE FONTS (MONTSERRAT)--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   
+  <Script>
+
+        $(function() {
+          $(".toggle").on("click", function(){
+
+            if($(".item").hasClass("active")){
+                $(".item").removeClass("active");
+                
+
+            }
+            else{
+                $(".item").addClass("active");
+            }
+
+          })
+
+        });
+
+  </Script>
+
+
+</head>
+<body>
+
+   <section class="form__Home">
+      <div class="form__container ">
+        <i class="fa-solid fa-xmark form_close"></i>
+        <!-- Login Form-->
+        <div class="form login__form">
+            <form action="#">
+                <h2>Login</h2>
+                <div class="input_box">
+                    <input type="email" placeholder="Enter your email" required />
+                    <i class="fa-regular fa-envelope email"></i>
+                </div>
+                <div class="input_box">
+                    <input type="password" placeholder="Enter your password" required />
+                    <i class="fa-solid fa-lock password"></i>
+                    <i class="fa-regular fa-eye-slash pw_hide"></i>
+                </div>
+                <div class="option_field">
+                    <span class="checkbox">
+                        <input type="checkbox" id="check">
+                        <label for="check">Remember me</label>
+                    </span>
+                    <a href="#" class="forget_pw">Forgot password?</a>
+                </div>
+
+                <button class="button">Login Now</button>
+
+                <div class="login_signup">Don't have an account?<a href="#" id="signup">Signup</a></div>
+            </form>
+        </div>
+
+          <!--  SignUP-->
+        <div class="form Signup__form">
+            <form action="#">
+                <h2>Signup</h2>
+                <div class="input_box">
+                    <input type="email" placeholder="Enter your email" required />
+                    <i class="fa-regular fa-envelope email"></i>
+                </div>
+                <div class="input_box">
+                    <input type="password" placeholder="Create password" required />
+                    <i class="fa-solid fa-lock password"></i>
+                    <i class="fa-regular fa-eye-slash pw_hide"></i>
+                </div>
+                <div class="input_box">
+                    <input type="password" placeholder="Confirm password" required />
+                    <i class="fa-solid fa-lock password"></i>
+                    <i class="fa-regular fa-eye-slash pw_hide"></i>
+                </div>
+
+                <button class="button">Signup Now</button>
+
+                <div class="login_signup">Already have an account?<a href="#" id="login">Login</a></div>
+            </form>
+        </div>
+
+
+      </div>
+
+   </section>
+
+     <!--Js file -->
+   <script src = "./login.js"></script>
+
+</body>
+</html>
