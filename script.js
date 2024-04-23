@@ -40,14 +40,14 @@ function showData(symbols){
     });
 }
 
-// validate the Amount to be converted
+// Validate the Amount to be converted
 fromAmount.addEventListener('keyup', function(){
     let amount = Number(this.value);
     if(!amount) fromAmount.style.borderColor = "#de3f44";
     else fromAmount.style.borderColor = "#c6c7c9";
 });
 
-// convert 'from country currency' to 'to country currency'
+// Convert 'from country currency' 'to country currency'
 convertBtn.addEventListener('click', () => {
     let fromCurrency = fromCurrencyOptions.value;
     let toCurrency = toCurrencyOptions.value;
@@ -56,7 +56,7 @@ convertBtn.addEventListener('click', () => {
     if(fromAmt) getConvertedData(fromCurrency, toCurrency, fromAmt);
 });
 
-// get the converted data from the API
+// Get the converted data from the API
 async function getConvertedData(from, to, amount){
     const API_URL = `https://api.exchangeratesapi.io/v1/convert?access_key=9a2d15f8f804907fe57d18389e72d77a&from=${from}&to=${to}&amount=${amount}`;
     const result = await fetch(API_URL);
@@ -65,13 +65,13 @@ async function getConvertedData(from, to, amount){
     displayConvertedData(from, to, amount, data.result);
 }
 
-// display the converted result
+// Display the converted result
 function displayConvertedData(fromCurrency, toCurrency, fromAmt, toAmt){
     fromResult.innerHTML = `${fromAmt.toFixed(2)} ${fromCurrency}`;
     toResult.innerHTML = `${toAmt.toFixed(2)} ${toCurrency}`;
 }
 
-// swap or reverse the currency
+// Swap or reverse the currency
 swapBtn.addEventListener('click', () => {
     let fromIndex = fromCurrencyOptions.selectedIndex;
     let toIndex = toCurrencyOptions.selectedIndex;
